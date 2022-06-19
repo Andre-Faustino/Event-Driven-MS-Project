@@ -1,0 +1,338 @@
+2022-02-19 12:08:29 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 143587 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 12:08:29 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 12:08:30 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.073 seconds (JVM running for 1.602)
+2022-02-19 12:08:30 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 12:08:30 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 12:08:30 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome
+2022-02-19 12:08:30 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-02-19 12:08:30 [main] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 12:08:31 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2022-02-19 12:08:31 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2022-02-19 12:08:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text I loved those ad pages in magazines listing newest ringtones, black-and-white wallpapers, and java games 😄 https://t.co/g5ZtDUXO3N
+2022-02-19 12:08:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @edebiyatbiIgisi: Hiç evlenmemiş ve çocuğu olmayan Franz Kafka, Berlin’de bir sokakta dolaşmaktadır. Ağlayan bir kız çocuğuna rastlar. Ç…
+2022-02-19 12:08:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Last call for Spring Area Meetings – spots are going quickly! So, if you're still looking for a GMM credit, join us this week at one of these fun gatherings. https://t.co/s9AMdch0TJ
+2022-02-19 12:08:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 12:08:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @3hr00am: Spring in Japan https://t.co/HfnqQ1fwAr
+2022-02-19 12:08:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RedPilledRn: @Storiesofinjury My son’s 14yo friend. 4 season amazing athlete, healthy & vibrant. Fully 💉 in spring. By mid summer/early…
+2022-02-19 12:08:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @asolitarypagan: https://t.co/bcLJrmWcdH
+2022-02-19 12:08:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Franz Kafka: Wait, there's a hentai?
+2022-02-19 12:08:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @eccentricverde: bella hadid for miss sixty spring 2022 https://t.co/Ng0nKoqHCM
+2022-02-19 12:08:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Kailash42232979: Keep a smile on your face. Keep a spring in your step.
+
+Joel Osteen
+
+SHINING STAR PRATIK SEHAJPAL 
+
+NAINA MERE POSTER…
+2022-02-19 12:08:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @FreddyStarBot Perdón, me junté mucho con spring(?)
+2022-02-19 12:08:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @I'm available to help with your coursework.
+#spring classes 
+#Essay due
+#essay 
+#Someone help 
+#Case study
+#Online class 
+#essay pay
+#English class 
+#Math homework
+#pay assignment
+#homework
+#essay write
+#essay help
+#Math
+#math exam
+Dm
+2022-02-19 12:08:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @GeniusEssayWri1: Grade A+ assured in any timed paper
+#Essay due
+#Pay write
+#javascript
+#Onlineclass 
+#Philosophy 
+#Chemistry
+Literature…
+2022-02-19 12:08:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @blerinaphysics: Weather in Prishtina feels like spring is already here! 🌞 https://t.co/zbcbjj0KtW
+2022-02-19 12:08:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 12:08:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Anti-coup revolutionary strike in Sagaing's Kale Twp as 377th day without a day off and sent prayers for fallen heroes during spring revolution. This is the longest protest in Myanmar. 🪧  #2022Feb19Coup #WarCrimesOfJunta #WhatsHappeningInMyanmar https://t.co/vLrYXeezrq
+2022-02-19 12:08:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Lockhimuplockhimuplockhimup
+Lockhimuplockhimuplockhimup
+Lockhimuplockhimuplockhimup
+Lockhimuplockhimuplockhimup
+Lockhimuplockhimuplockhimup
+Lock all Ooosterhoffs up!
+2022-02-19 12:08:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 12:08:40 [SpringApplicationShutdownHook] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Closing twitter stream!
+2022-02-19 13:27:42 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 144881 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 13:27:42 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 13:27:43 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.109 seconds (JVM running for 1.624)
+2022-02-19 13:27:43 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 13:27:43 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:27:43 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome
+2022-02-19 13:27:43 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-02-19 13:27:43 [main] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:27:44 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2022-02-19 13:27:44 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2022-02-19 13:27:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @javinpaul: The elusive and beautiful Java Method Reference by Donald Raab https://t.co/UaB1LVIVSx #Java #Programming by @TheDonRaab via…
+2022-02-19 13:27:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Anti-coup revolutionary strike in Sagaing's Kale Twp as 377th day without a day off and sent prayers for fallen heroes during spring revolution. This is the longest protest in Myanmar. 🪧  #2022Feb19Coup #WarCrimesOfJunta #WhatsHappeningInMyanmar https://t.co/NCA1dvsPsb
+2022-02-19 13:27:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @inflickers: spring day 🌸 #btsfanart #hoseok https://t.co/tyCzuB26d4
+2022-02-19 13:27:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:27:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @blerinaphysics: Weather in Prishtina feels like spring is already here! 🌞 https://t.co/zbcbjj0KtW
+2022-02-19 13:27:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #Submissions are open for our issue 15 this #Spring!
+
+Please send your #creativewriting & #art to theforgezinesubmissions@gmail.com before 7 March at midnight GMT!
+
+More info & print #zines: https://t.co/AguVktxCJd
+
+Read our back catalogue online for free: https://t.co/1MSgPh24TU
+2022-02-19 13:27:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hi << Test First Name >>, lighten up in spring-ready garment dyed t-shirts! - https://t.co/RyTq3YrfCc
+-
+#Tshirt #Tshirts #Shirt #Shirts #LuxPima #Pima #georgroth #fashion #Spring #Spring2022 https://t.co/9pNvcERFFQ
+2022-02-19 13:27:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:27:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @multiforoalicio: «Qué tal si duermo más y me olvido 
+de toda esta locura».
+
+. -- Franz Kafka
+2022-02-19 13:27:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:27:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL #MUNSOU#CHEPAL #MUNBHA #Bayern jubilee #PSGRMA NHIF #InterLiverpool #INTLIV #MasculinitySaturday Dobdje #TTTT Take the 70 #BarcaNapoli #LeiRan #tinga #g8
+2022-02-19 13:27:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 13:27:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @MrBill5555 I suspect you may be right, bulbs starting to come here too, little signs of spring. 😊
+2022-02-19 13:27:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @doramaworld: Kashii Yui to appear in Kansai TV Spring 2022 drama "Koi nante, honki de yatte dousuru no?"; plays Nakagawa Misaki, the ow…
+2022-02-19 13:27:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nuicemedia: Get ready for a tempe and tofu scarcity in the next few days. The Association of Tempe Tofu Producer Cooperatives is planni…
+2022-02-19 13:27:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Bewickwren @Ember_Hiker @larssonzita @stenaranjo @joannaabq @TravelCatsBlog @BurqueTwit @MelinaGoodman4 @jmattscpa @LinnOCarroll @DrAGPayne @kmhurley @nmchile @joaoleitao @RayeAlbright @htsosie2010 @A_Research_Guru @palmstrading @tuscanray @WynsmOnTheRez Yep. Started a bunch more this week. Spring seedlings have already been transplanted.
+2022-02-19 13:27:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/LLXmS6G4PZ  FREE SHIPPING #lamps #nightlights #midcenturymodern #giftideas #gifts #gift #EtsySeller #etsyfinds #handmade #homedecor #50s #Retro #glassblocks #FreeShipping #dandelions #dandelion #spring #giftsforher #freeshipping #giftforher #bedroomdecor #EtsySeller https://t.co/G3Bd4TcvZX
+2022-02-19 13:27:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @straighthey1: #芸術 #芸術の輪 #芸術同盟 #芸術文化 #art #artwork
+📌2022 2.19　③
+2022-02-19 13:27:50 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text this literal 10 second video will be my baseball fix until spring starts
+2022-02-19 13:27:50 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LouGarza86: Good morning Java Junkies ☕
+@FritsV4 @HandsUpDontShut @adavaco @ZEALOUSZZELDAA @benbrookjohn @Jmf134Jeff @EdTruman3 @IBLEED…
+2022-02-19 13:27:51 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL #MUNSOU#CHEPAL #MUNBHA #Bayern jubilee #PSGRMA NHIF #InterLiverpool #INTLIV #MasculinitySaturday Dobdje #TTTT Take the 70 #BarcaNapoli #LeiRan #tinga #g9
+2022-02-19 13:27:51 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:27:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @CorrinaLeeB Snow flurries later. At least it is winter rather than a faux spring.
+2022-02-19 13:27:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @tcnjlions: Big GAME DAY on tap! 
+
+🏊‍♀️🏊‍♂️ @TCNJ_WSwimDive and @TCNJ_WSwimDive on METs Day 3
+🏀 @tcnjwb and @TCNJMBB hosting NJAC playof…
+2022-02-19 13:27:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @comidoc: Selenium in Java - Setup Simple Test Automation Framework  
+4 hours | 73863 students  | October 2021 release 
+
+🆓 LINK => https…
+2022-02-19 13:27:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Anti-coup revolutionary strike in Sagaing's Kale Twp as 377th day without a day off and sent prayers for fallen heroes during spring revolution. This is the longest protest in Myanmar. 🪧  #2022Feb19Coup #WarCrimesOfJunta #WhatsHappeningInMyanmar https://t.co/iFGnGkacXH
+2022-02-19 13:27:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JerraeWilliams7: 😈😈😈
+2022-02-19 13:27:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @GarethSoloway: If invasion occurs, the highest probability will be Sunday-Monday. #Olympics are over (won't upset China) and spring is…
+2022-02-19 13:27:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pay An Expert Now!
+Online class
+Math
+Exam
+Accounting
+Finance
+Spring semester
+Geometry
+Psychology
+Socialogy
+History
+Chemistry
+Physics
+Case study
+Trigonometry..
+Calculus.
+Stats
+Homework
+Dissertation
+Lab report
+essay
+Thesis
+Speech
+Case study
+Excel
+Discussion posts
++1(518)553-4482
+2022-02-19 13:27:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 13:27:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text I'm speaking more about meltdowns lately because mine usually happen in the late winter early spring when the days grow longer. It's imperative that we stand up to medical on patient abuse. Doctors, Nurses, etc. are not there to abuse you ala police style.
+2022-02-19 13:27:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Andr3Machado: Classical music explained. A gorgeous animation about Stravinsky’s The Rite of Spring 
+https://t.co/fNiYKoNqTg
+
+#Classica…
+2022-02-19 13:27:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:27:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:27:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TheCatOnBallyTV: SPRING TRAINING FLASHBACK: Every year.
+#RegionalCableJournalism #STLCards https://t.co/iFOfKeW2AK
+2022-02-19 13:27:57 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ndeeyuh: critics shouldnt be allowed to have opinions on these kinda movies because what are you criticizing? it was something cute for…
+2022-02-19 13:27:57 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MankotiaParveen: @asharamjibapu_ Very useful health tips for spring season 👌
+2022-02-19 13:27:58 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text When you've looked at the stream deck for a while and then your bae comes out with this #bloodhunt
+2022-02-19 13:27:58 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @MasalaFry69 Before she met her fiancé
+https://t.co/4J3xVhKeET
+2022-02-19 13:27:59 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fulminarey: spring in italy https://t.co/lNfUrSBSjD
+2022-02-19 13:27:59 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL #MUNSOU#CHEPAL #MUNBHA #Bayern jubilee #PSGRMA NHIF #InterLiverpool #INTLIV #MasculinitySaturday Dobdje #TTTT Take the 70 #BarcaNapoli #LeiRan #tinga #h1
+2022-02-19 13:28:00 [SpringApplicationShutdownHook] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Closing twitter stream!
+2022-02-19 13:28:12 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 144954 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 13:28:12 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 13:28:13 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.038 seconds (JVM running for 1.558)
+2022-02-19 13:28:13 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 13:28:13 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:28:13 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome
+2022-02-19 13:28:13 [main] INFO  c.m.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:28:13 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Maecenas congue pulvinar posuere porttitor consectetuer Java malesuada pulvinar elit congue porttitor
+2022-02-19 13:28:23 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sit congue amet malesuada Spring amet sit
+2022-02-19 13:28:33 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text adipiscing purus amet Java Maecenas pulvinar
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 145047 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.04 seconds (JVM running for 1.555)
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome
+2022-02-19 13:28:41 [main] INFO  c.m.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:28:41 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text lectus Maecenas lectus posuere congue magna Elasticsearch sed Lorem sit libero massa
+2022-02-19 13:28:42 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text lectus ipsum Lorem sit massa posuere massa adipiscing Microservices Maecenas posuere dolor sit Lorem dolor libero
+2022-02-19 13:28:42 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Maecenas sit consectetuer massa massa Fusce libero congue Microservices amet adipiscing Lorem Maecenas malesuada amet purus
+2022-02-19 13:28:43 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sit massa massa malesuada adipiscing Elasticsearch ipsum porttitor dolor
+2022-02-19 13:28:43 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text pulvinar purus lectus elit Microservices libero pulvinar sit
+2022-02-19 13:28:44 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor consectetuer Maecenas malesuada elit adipiscing Spring consectetuer lectus adipiscing porttitor
+2022-02-19 13:28:44 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Lorem ultricies pulvinar ipsum pulvinar Elasticsearch congue consectetuer sit adipiscing
+2022-02-19 13:28:45 [pool-1-thread-1] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Lorem massa sed massa massa Lorem porttitor posuere Microservices congue porttitor dolor amet sit lectus massa
+2022-02-19 13:31:01 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 145170 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 13:31:01 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 13:31:02 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.079 seconds (JVM running for 1.603)
+2022-02-19 13:31:02 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 13:31:02 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:31:02 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome!
+2022-02-19 13:31:02 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-02-19 13:31:02 [main] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 13:31:03 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2022-02-19 13:31:03 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIVNOR #MCITOT #ARSBRE #SOUEVE jubilee #PSGRMA NHIF #InterLiverpool  #UhuruWaKiambu sagana 3 #TTTT Take the 70  manchester #LeiRan SK Macharia JKIA Gen Z #h
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text SPRING REGISTRATION OPEN ONLINE
+https://t.co/uQfshqA7Xs https://t.co/QqhdwGjCos
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kevezell: ⁦@NAMB_SBC⁩ missionary to West Point, Joshua Austin, baptized two new West Point cadets this week in the frigid Hudson River.…
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @gp_pulipaka: 12 Weeks, 24 Lessons, Classic #MachineLearning for All. #BigData #Analytics #DataScience #AI #IoT #IIoT #PyTorch #Python #…
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ShadyWordPress: @KIIARA Twitter Without Me #trendingkiiara @KIIARA #Roblox #buildinginpublic #Security #Python #BigData #AI #IoT #IIoT…
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Corrie137: Great to see Governor candidate @KevinMNicholson at the @WCDigest conference.
+
+I *really* appreciated his comments on electi…
+2022-02-19 13:31:04 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ShadyWordPress: Who Knows The Story”David and Goliath”that’s what’s just occurred @KIIARA #trendingkiiara #HTML #AI #FactsNotFear #Secu…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ShadyWordPress: @KIIARA Twitter Without Me #trendingkiiara @KIIARA #Roblox #buildinginpublic #Security #Python #BigData #AI #IoT #IIoT…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @remote_dev_jobs: Container Platform Engineer, Vice President at MUFG #Application #Automation #Design #Java #Lead #Python #Security #Sy…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ShadyWordPress: This Is What Happens When 
+         Bad Beats Evil 
+                 The Sequel
+#trendingkiiara #AssassinsCreed @KIIARA…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @eighth_mile: @KIIARA 🦅💨💨💨 no filter #Python #BigData #Analytics #AI #DataScience #IoT #IIoT #Azure #PyTorch #Cython #RStats #DotNet #C…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @eighth_mile: 🦅💨💨#CSS #HTML 💨💨#trendingkiiara @KIIARA #Security
+#Closer #Python #AI #IoT #IIoT #Azure #PyTorch #Cython #RStats #DotNet #…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @byLilyV: #FEATURED #COURSES
+
+#Java #Programming Masterclass for #Software #Developers
+
+Learn Java In This #Course And Become a #Compute…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ⋆ˊˎ  hiram laistimigs 
+
+white hearts, herbs, poisons, pink knives, spring, sea, marina’s music, bloody hands, platform boots, green places, warm skin, blue sky, shaky breath, brown cats, sharp tattoos https://t.co/XhdJPeNWXY
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @eighth_mile: @lilpapabean_ @KIIARA ehhhm #Python #BigData #Analytics #AI #DataScience #IoT #IIoT #Azure #PyTorch #Cython #RStats #DotNe…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @krowkenne: https://t.co/gtDs0dyoU0
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding Liverpool  #CRYCHE #LIV…
+2022-02-19 13:31:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @donkollio: https://t.co/WFFRKHWKbL
+#WomenWhoCode #javascript #PyTorch #NFT #Python #java #100daysofcode #coding #TheOdingaExposed #UCL…
+2022-02-19 13:31:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @dscbau20: Follow us to know more about #technical_debt😎
+#coding #programming  #Python 
+#webdesign #website #programmer #python #debt #c…
+2022-02-19 13:31:07 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @treasurediorr: Spring Break come here 🌹🔥🤭🔆 https://t.co/qJwoIRqu2L
+2022-02-19 13:31:07 [SpringApplicationShutdownHook] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Closing twitter stream!
+2022-02-19 14:07:18 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 146537 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 14:07:18 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 14:07:18 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.microservices.config.TwitterToKafkaServiceConfigData' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-02-19 14:07:18 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-19 14:07:18 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication required a bean of type 'com.microservices.config.TwitterToKafkaServiceConfigData' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.microservices.config.TwitterToKafkaServiceConfigData' in your configuration.
+
+2022-02-19 14:07:50 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.2 on andre-faustino with PID 146663 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-02-19 14:07:50 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-02-19 14:07:51 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.034 seconds (JVM running for 1.547)
+2022-02-19 14:07:51 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-02-19 14:07:51 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 14:07:51 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Welcome!
+2022-02-19 14:07:51 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-02-19 14:07:51 [main] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-02-19 14:07:52 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2022-02-19 14:07:52 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2022-02-19 14:07:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SuccessAnalytiX: The Science of Success
+
+https://t.co/xLM2OrqHBd
+
+#BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats…
+2022-02-19 14:07:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @shortprose1: A spoonful of dreams 
+my hair freshly cut
+spring will come
+peaches will grow on one side of the moon
+injured lambs will sc…
+2022-02-19 14:07:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text High School, Middle School, Elementary.  Boys and Girls.  Come train at the Warrior RTC this spring & summer!
+2022-02-19 14:07:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amorelabella: *
+
+             📸: SPOTTED 
+                ______________
+ 
+  Gorgeous people are never late.
+   Everyone else is simply…
+2022-02-19 14:07:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @lalafanlalaport: ＼🛋らららな春、はじめよう LaLaport Spring フォロー＆いいねキャンペーン🏠／
+
+第3弾は #ヨギボー の #yogiboshort をプレゼント！🎁
+
+このアカウントをフォロー＆投稿に「いいね」で応募完了✨
+応募規約はプ…
+2022-02-19 14:07:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Oktaviani116: JUL-893 I can't tell my wife even if my mouth is torn, I can't say that I've conceived my mother-in-law ... -I forgot abo…
+2022-02-19 14:07:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @disdactivities: More than 100 cheerleaders from 14 campuses are using their Saturday to enhance their cheers, chants, stunts, and skill…
+2022-02-19 14:07:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @danperigon @JB_Rad619 @cdixon25 @MLBPA_News @JasonLaCanfora @MLBPA @PELOTEROS_MLB There is zero chance the plays show up for spring training without a CBA.  They don’t get paid until the regular season starts.
+2022-02-19 14:07:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ScreenshotSatRT Hey hey! Thank you for sharing your space Today! This week a lot of work has went into AI, to make it smarter and more challenging. https://t.co/9qKtzTgtuc
+2022-02-19 14:07:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jairocalixto: Parece que los amlovers nacen en todas partes, no se vale! Esto no les va a gustar los del VOX spring y al Ku Klux PAN, m…
+2022-02-19 14:07:57 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AkyolinEnglish: I am so sad to see that #Tunisia, the only country that seemed to bring the hopes of the Arab Spring to fruition, is co…
+2022-02-19 14:07:58 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FemmiiTA: ฉากที่แทฮยองเอาหูแนบกับรางรถไฟใน MV เพลง Spring Day ทำให้นึกถึงฉากหนึ่งในภาพยนตร์เรื่อง Inception ที่พูดถึงสภาวะความจริงกับคว…
+2022-02-19 14:07:59 [SpringApplicationShutdownHook] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Closing twitter stream!

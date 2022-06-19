@@ -1,15 +1,15 @@
 package com.microservices.kafka.admin.exception;
 
-public class kafkaAdminException extends RuntimeException{
+public class KafkaClientException extends RuntimeException{
 
-    public kafkaAdminException() {
+    public KafkaClientException() {
     }
 
-    public kafkaAdminException(String message) {
+    public KafkaClientException(String message) {
         super(message);
     }
 
-    public kafkaAdminException(String message, Throwable cause) {
+    public KafkaClientException(String message, Throwable cause) {
         super(message, cause);
     }
 }

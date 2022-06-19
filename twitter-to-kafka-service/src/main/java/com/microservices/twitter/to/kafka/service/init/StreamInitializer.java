@@ -1,2 +1,5 @@
-package com.microservices.twitter.to.kafka.service.init;public class StreamInitializer {
+package com.microservices.twitter.to.kafka.service.init;
+
+public interface StreamInitializer {
+    void init();
 }

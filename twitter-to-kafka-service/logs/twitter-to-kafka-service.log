@@ -1,0 +1,1215 @@
+2022-06-18 19:24:12 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on andre-faustino with PID 17765 (/home/andre/dev/learning/event-driven-ms/microservices/twitter-to-kafka-service/target/classes started by andre in /home/andre/dev/learning/event-driven-ms/microservices)
+2022-06-18 19:24:12 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2022-06-18 19:24:13 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-06-18 19:24:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-06-18 19:24:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-06-18 19:24:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1655591053503
+2022-06-18 19:24:14 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2022-06-18 19:24:14 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.84 seconds (JVM running for 3.723)
+2022-06-18 19:24:14 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2022-06-18 19:24:14 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Creating 1 topic(s), attemps 0
+2022-06-18 19:24:14 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attemps 0
+2022-06-18 19:24:14 [main] INFO  c.m.t.t.k.s.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations!
+2022-06-18 19:24:14 [main] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2022-06-18 19:24:14 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-06-18 19:24:15 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2022-06-18 19:24:15 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1328228966512136192, "id": 1538286476449955846, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-06-18 19:24:15 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1655591055891
+2022-06-18 19:24:15 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: alUQ5t3lT_SYSk-FhHoOTQ
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1213604695870017536, "id": 1538286476601004032, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1120930695767969792, "id": 1538286477201010688, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1098776530401017857, "id": 1538286477347528705, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 915856059255758848, "id": 1538286477674958849, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1140000597044682752, "id": 1538286477775237120, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591050000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @kitappencere: “Olmamasına razıyım. Oluyormuş gibi olmasın yeter.”
+
+Franz Kafka sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1204368455773937666, "id": 1538286480065445889, "text": "RT @kitappencere: \u201COlmamasına razıyım. Oluyormuş gibi olmasın yeter.\u201D\n\nFranz Kafka", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1240338159394840584, "id": 1538286480329781248, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @HornyBesties: 🔞🔞🔞🍎Happy hot spring Festival🥳💖#Diluthoma https://t.co/hz840h7uh5 sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1457473728250806272, "id": 1538286480539656192, "text": "RT @HornyBesties: 🔞🔞🔞🍎Happy hot spring Festival🥳💖#Diluthoma https://t.co/hz840h7uh5", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1271332439248588800, "id": 1538286480531005445, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1122231233650544641, "id": 1538286481663528963, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1281940440896475137, "id": 1538286481856507904, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591051000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1208019231238803457, "id": 1538286482338811905, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591052000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 188972892, "id": 1538286482473078787, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591052000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text Evergreen thread 🧵 sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2218742450, "id": 1538286483261431808, "text": "Evergreen thread 🧵", "createdAt": 1655591052000}' to topic='twitter-topic'
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1308421547464495111, "id": 1538286484016533504, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591052000}' to topic='twitter-topic'
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text Excited to share the latest addition to my #etsy shop: The sunflower memo notepad https://t.co/tEs1ihjH7o #memopad #notepad #cute #cutememonotepad #stadtionery #sunflower #spring #summer #todolist
+https://t.co/yhnCD6kh0I https://t.co/swGyt2xVYl sending to kafka topic twitter-topic
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1474075850341507078, "id": 1538286486117924864, "text": "Excited to share the latest addition to my #etsy shop: The sunflower memo notepad https://t.co/tEs1ihjH7o #memopad #notepad #cute #cutememonotepad #stadtionery #sunflower #spring #summer #todolist\nhttps://t.co/yhnCD6kh0I https://t.co/swGyt2xVYl", "createdAt": 1655591052000}' to topic='twitter-topic'
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1276245016055341063, "id": 1538286487476764673, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591053000}' to topic='twitter-topic'
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1251273788278349824, "id": 1538286488160505861, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591053000}' to topic='twitter-topic'
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text want to celebrate The Resurrection of 
+@JAVdottxt
+? what better way than buying t-shirts, hoodies, fanny packs, stickers mugs and a bunch of other shit? i need money! https://t.co/qUGaszRmtf https://t.co/kVUj1UH6Ce sending to kafka topic twitter-topic
+2022-06-18 19:24:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 880485161414139905, "id": 1538286488965853190, "text": "want to celebrate The Resurrection of \n@JAVdottxt\n? what better way than buying t-shirts, hoodies, fanny packs, stickers mugs and a bunch of other shit? i need money! https://t.co/qUGaszRmtf https://t.co/kVUj1UH6Ce", "createdAt": 1655591053000}' to topic='twitter-topic'
+2022-06-18 19:24:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @AdhiSquarePants: Customize Your Matplotlib Plots in Python
+
+https://t.co/22PFAJt0kc
+
+#Python #DataScientist #BigData #Analytics #DataSc… sending to kafka topic twitter-topic
+2022-06-18 19:24:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1168192787990425600, "id": 1538286491700445184, "text": "RT @AdhiSquarePants: Customize Your Matplotlib Plots in Python\n\nhttps://t.co/22PFAJt0kc\n\n#Python #DataScientist #BigData #Analytics #DataSc\u2026", "createdAt": 1655591054000}' to topic='twitter-topic'
+2022-06-18 19:24:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 344379570, "id": 1538286492728152065, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591054000}' to topic='twitter-topic'
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1178408467444457472, "id": 1538286494259023878, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591054000}' to topic='twitter-topic'
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text Chest kind of heavy????                      #Life 
+ #spring #ATL
+ #spring #ATL #selfie #body #goals #blackbeard #beardgang #shred #ronocole #roncole #weight #fitness #exercise #beastmode #muscle #diet #pecs #beard #abs #chest #caribbean #wine #gym #newyear #saturday https://t.co/9Uiz6aByL6 sending to kafka topic twitter-topic
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 424685271, "id": 1538286493260820480, "text": "Chest kind of heavy????                      #Life \n #spring #ATL\n #spring #ATL #selfie #body #goals #blackbeard #beardgang #shred #ronocole #roncole #weight #fitness #exercise #beastmode #muscle #diet #pecs #beard #abs #chest #caribbean #wine #gym #newyear #saturday https://t.co/9Uiz6aByL6", "createdAt": 1655591054000}' to topic='twitter-topic'
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:20 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 259806518, "id": 1538286497287114752, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591055000}' to topic='twitter-topic'
+2022-06-18 19:24:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1073807274341101570, "id": 1538286500386725888, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591056000}' to topic='twitter-topic'
+2022-06-18 19:24:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text I am so grateful to everyone that made today possible: 
+-Our community leaders (applicants and grantmaking team)
+-Our facilitators 👏🏾
+-Our funders 🫶🏾
+-Our Board of Instigators & staff🙌🏾
+ and many more! sending to kafka topic twitter-topic
+2022-06-18 19:24:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3232845907, "id": 1538286501959704578, "text": "I am so grateful to everyone that made today possible: \n-Our community leaders (applicants and grantmaking team)\n-Our facilitators 👏🏾\n-Our funders 🫶🏾\n-Our Board of Instigators & staff🙌🏾\n and many more!", "createdAt": 1655591056000}' to topic='twitter-topic'
+2022-06-18 19:24:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1459418803285086208, "id": 1538286504979857408, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591057000}' to topic='twitter-topic'
+2022-06-18 19:24:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1487083921086959617, "id": 1538286506065899520, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591057000}' to topic='twitter-topic'
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1431428651459903494, "id": 1538286508821475329, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591058000}' to topic='twitter-topic'
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1461748462794514437, "id": 1538286509895344131, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591058000}' to topic='twitter-topic'
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1405715480757694464, "id": 1538286510377578496, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591058000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @Brian7NewsDC: It was 99 degrees yesterday and 79 degrees today.  Which do you prefer?  After a summer preview I'm loving this fantastic… sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 14897840, "id": 1538286512185409536, "text": "RT @Brian7NewsDC: It was 99 degrees yesterday and 79 degrees today.  Which do you prefer?  After a summer preview I'm loving this fantastic\u2026", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1530518162567229441, "id": 1538286512273428481, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1290167670097055744, "id": 1538286512541818880, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 69127087, "id": 1538286513854763009, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1355704324551270402, "id": 1538286514081251334, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text Check out Corey Cola's 2022 JUCO Spring Camp on @Hudl https://t.co/76ibdJ4Tgw #hudl sending to kafka topic twitter-topic
+2022-06-18 19:24:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2591026041, "id": 1538286514437640193, "text": "Check out Corey Cola's 2022 JUCO Spring Camp on @Hudl https://t.co/76ibdJ4Tgw #hudl", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @OUTTA_FOCUS If people weren't buying 3 out 5 would probably go belly up. I hope my wife doesn't put the Java sh to my crypto. She's making valid points. The bottom isn't in but it's hella close. Hard to sell Everything and buy all the Etherium I can muster. sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1449160090016264196, "id": 1538286515268333573, "text": "@OUTTA_FOCUS If people weren't buying 3 out 5 would probably go belly up. I hope my wife doesn't put the Java sh to my crypto. She's making valid points. The bottom isn't in but it's hella close. Hard to sell Everything and buy all the Etherium I can muster.", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1300474113526431745, "id": 1538286516224393216, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591060000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text 🇷🇺🇺🇦 
+Video from Sky News showing supplies being brought into the Ukr controlled area in #Severodonetsk via boats...due to the warmer weather, it's said the river level is significantly lower than in the winter and spring https://t.co/OCnn7GRxCO sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 505196984, "id": 1538286515649884160, "text": "🇷🇺🇺🇦 \nVideo from Sky News showing supplies being brought into the Ukr controlled area in #Severodonetsk via boats...due to the warmer weather, it's said the river level is significantly lower than in the winter and spring https://t.co/OCnn7GRxCO", "createdAt": 1655591059000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 55740378, "id": 1538286517897924608, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591060000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1363605693970800640, "id": 1538286518216687616, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591060000}' to topic='twitter-topic'
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1376697840110567428, "id": 1538286518711857163, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591060000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1453608567806726146, "id": 1538286519600877568, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591060000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1046493700216553472, "id": 1538286520049754112, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1370165728901533697, "id": 1538286521261989888, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2258732230, "id": 1538286521777889281, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1640927869, "id": 1538286522713026560, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @Tatiana19796: Franz Kafka Agonized, Too, Over Writer’s Block: "Tried to Write, Virtually Useless;" "Complete Standstill. Unending Torme… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 42932176, "id": 1538286522927128577, "text": "RT @Tatiana19796: Franz Kafka Agonized, Too, Over Writer\u2019s Block: \"Tried to Write, Virtually Useless;\" \"Complete Standstill. Unending Torme\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:26 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1214286460368482304, "id": 1538286523250094083, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 843125304440905730, "id": 1538286523841490944, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1381467487468933120, "id": 1538286523937849351, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1317991395626463232, "id": 1538286523971510273, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591061000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1467034737097072641, "id": 1538286525103763456, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591062000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 736184496, "id": 1538286526139969540, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591062000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 886876957, "id": 1538286526441865218, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591062000}' to topic='twitter-topic'
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:27 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1491334677931565063, "id": 1538286526928281600, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591062000}' to topic='twitter-topic'
+2022-06-18 19:24:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1165681106, "id": 1538286528576868352, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591063000}' to topic='twitter-topic'
+2022-06-18 19:24:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text JAVA DEVELOPERS (All Levels Needed) - Remote, Remote https://t.co/LsLRwstHHr sending to kafka topic twitter-topic
+2022-06-18 19:24:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1087749763548700673, "id": 1538286531772915712, "text": "JAVA DEVELOPERS (All Levels Needed) - Remote, Remote https://t.co/LsLRwstHHr", "createdAt": 1655591063000}' to topic='twitter-topic'
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1247343807009566721, "id": 1538286534557720577, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591064000}' to topic='twitter-topic'
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1376650706489208834, "id": 1538286534553571328, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591064000}' to topic='twitter-topic'
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1112553990917545984, "id": 1538286534805573632, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591064000}' to topic='twitter-topic'
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1329394981174472706, "id": 1538286536009056256, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591064000}' to topic='twitter-topic'
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1251616467117920257, "id": 1538286537435226112, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591065000}' to topic='twitter-topic'
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3218782716, "id": 1538286538664120321, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591065000}' to topic='twitter-topic'
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @EverydayKiiara:  And We Still Trust Education 
+#Python #Roblox #IoT #IIoT #Azure #PyTorch #Cython #RStats #DotNet #Web3 #Java #BTSV #A… sending to kafka topic twitter-topic
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1161437685820641281, "id": 1538286539863576576, "text": "RT @EverydayKiiara:  And We Still Trust Education \n#Python #Roblox #IoT #IIoT #Azure #PyTorch #Cython #RStats #DotNet #Web3 #Java #BTSV #A\u2026", "createdAt": 1655591065000}' to topic='twitter-topic'
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @BurneJonesArt: Spring #burnejones #romanticism https://t.co/BxvPT4GQ4b https://t.co/19nzrSNarZ sending to kafka topic twitter-topic
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1069518019523747840, "id": 1538286539993645062, "text": "RT @BurneJonesArt: Spring #burnejones #romanticism https://t.co/BxvPT4GQ4b https://t.co/19nzrSNarZ", "createdAt": 1655591065000}' to topic='twitter-topic'
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 170311235, "id": 1538286540119412738, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591065000}' to topic='twitter-topic'
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1260772111318052865, "id": 1538286541591572480, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1221276123184672768, "id": 1538286542107680773, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1296458391460745219, "id": 1538286542938025984, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 866409841010626560, "id": 1538286544141819906, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1361983326110720002, "id": 1538286544385359872, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @ScottDuncanWX @pwolodarski What was it like last spring when farmers had to protect crops from freezing? So that was weather and this is climate? sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 560532492, "id": 1538286544506822656, "text": "@ScottDuncanWX @pwolodarski What was it like last spring when farmers had to protect crops from freezing? So that was weather and this is climate?", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1004865719731998720, "id": 1538286544703746048, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @T_Assignments: Home of Academic solutions: 
+Let me handle your assignment in due time 
+#Summer classes
+#Class Homework
+#Essay pay
+#Thes… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1423655520196435969, "id": 1538286544863248384, "text": "RT @T_Assignments: Home of Academic solutions: \nLet me handle your assignment in due time \n#Summer classes\n#Class Homework\n#Essay pay\n#Thes\u2026", "createdAt": 1655591066000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1298606223701561344, "id": 1538286545676926981, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1391640455641636864, "id": 1538286546260209664, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1029221036611399684, "id": 1538286547841126400, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1390295564995203077, "id": 1538286548235522049, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @WinmetawinO: [Update] ตารางงาน @winmetawin 19.06.22
+
+📢 Prada Spring Summer 2023 Menswear Fashion Show
+⏰ 19.00 น. 
+
+🔥 เริ่มเทรนด์ 18.30… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1485930726680047616, "id": 1538286548617048064, "text": "RT @WinmetawinO: [Update] ตารางงาน @winmetawin 19.06.22\n\n📢 Prada Spring Summer 2023 Menswear Fashion Show\n⏰ 19.00 น. \n\n🔥 เริ่มเทรนด์ 18.30\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1174353320653119494, "id": 1538286548675874816, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1296662508208496641, "id": 1538286549003304960, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591067000}' to topic='twitter-topic'
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1413965424740474885, "id": 1538286550705840128, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591068000}' to topic='twitter-topic'
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2937336879, "id": 1538286551825891328, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591068000}' to topic='twitter-topic'
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1288290261311856641, "id": 1538286552220147712, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591068000}' to topic='twitter-topic'
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1202891760281645056, "id": 1538286552391946240, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591068000}' to topic='twitter-topic'
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1384553788242018306, "id": 1538286553012789248, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591068000}' to topic='twitter-topic'
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1452474207552425985, "id": 1538286556091404290, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591069000}' to topic='twitter-topic'
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1465217071999238144, "id": 1538286556162600960, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591069000}' to topic='twitter-topic'
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1150531135979565061, "id": 1538286556842274819, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591069000}' to topic='twitter-topic'
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1110716472509325314, "id": 1538286556905078784, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591069000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @Rebecca35935662: Just asking this question til I’m blue in the face really. It just feels like you’re in a Kafka novel sometimes. sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 56236975, "id": 1538286557039239168, "text": "RT @Rebecca35935662: Just asking this question til I\u2019m blue in the face really. It just feels like you\u2019re in a Kafka novel sometimes.", "createdAt": 1655591069000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1334556033616916482, "id": 1538286558331256834, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1261259468735537154, "id": 1538286558557896704, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 947079726035714048, "id": 1538286558717317120, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 739953270, "id": 1538286558909964292, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1400972949109325826, "id": 1538286559929171969, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 269572527, "id": 1538286560642117632, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2860812545, "id": 1538286560973578240, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591070000}' to topic='twitter-topic'
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1506333370116100100, "id": 1538286562311647239, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591071000}' to topic='twitter-topic'
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1160511476995543040, "id": 1538286564085596161, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591071000}' to topic='twitter-topic'
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1464589848090710017, "id": 1538286565251616769, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591071000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 964256986618650625, "id": 1538286565620862978, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591071000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 235222376, "id": 1538286566069903360, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591071000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 210636140, "id": 1538286566811963392, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @Ojalasupierata1 @JaviCarrascoMun @andrea_drea05 Si me permites una recomendación:
+Billy Joel, especialmente su primer álbum (1971) "Cold Spring Harbor", y "The Nylon Curtain" (1982).
+Por cierto, Lorraine MacIntosh tiene los ojos azules más preciosos que nunca me han mirado (Barcelona, Palau de la Música, 1993). sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 255465126, "id": 1538286568183562242, "text": "@Ojalasupierata1 @JaviCarrascoMun @andrea_drea05 Si me permites una recomendación:\nBilly Joel, especialmente su primer álbum (1971) \"Cold Spring Harbor\", y \"The Nylon Curtain\" (1982).\nPor cierto, Lorraine MacIntosh tiene los ojos azules más preciosos que nunca me han mirado (Barcelona, Palau de la Música, 1993).", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1216603318069284864, "id": 1538286569047568385, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1263650808551391232, "id": 1538286569160941570, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1080953522298990594, "id": 1538286569253220353, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 270639617, "id": 1538286569584566273, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591072000}' to topic='twitter-topic'
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @audubonsociety: What do Stevie Wonder, Vera Wang, and Iggy Pop have in common? Each of them could potentially share a ‘hatch year’ with… sending to kafka topic twitter-topic
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1960925694, "id": 1538286570410852352, "text": "RT @audubonsociety: What do Stevie Wonder, Vera Wang, and Iggy Pop have in common? Each of them could potentially share a \u2018hatch year\u2019 with\u2026", "createdAt": 1655591073000}' to topic='twitter-topic'
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1383260660683870216, "id": 1538286570419134464, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591073000}' to topic='twitter-topic'
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1272689027259469828, "id": 1538286570431709185, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591073000}' to topic='twitter-topic'
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1344318312214310913, "id": 1538286570683482117, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591073000}' to topic='twitter-topic'
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1283279179275001856, "id": 1538286572679962625, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591073000}' to topic='twitter-topic'
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1119688290356146181, "id": 1538286576865890306, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591074000}' to topic='twitter-topic'
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 596112367, "id": 1538286577368961024, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591074000}' to topic='twitter-topic'
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @Criterion: Remembering the beautifully life-affirming and endlessly captivating actress Setsuko Hara, born on this day in 1920. 💗 You c… sending to kafka topic twitter-topic
+2022-06-18 19:24:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 989867474, "id": 1538286577339682816, "text": "RT @Criterion: Remembering the beautifully life-affirming and endlessly captivating actress Setsuko Hara, born on this day in 1920. 💗 You c\u2026", "createdAt": 1655591074000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1432551231361372160, "id": 1538286578426060803, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591074000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1292517465797406720, "id": 1538286578904313856, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1267713650791337985, "id": 1538286579709800448, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2354052199, "id": 1538286579734691840, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1346661061706067970, "id": 1538286580309401600, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 962297408464986119, "id": 1538286581622374400, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1283250786189873152, "id": 1538286581970247680, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 611073475, "id": 1538286582070796289, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 886648206645448705, "id": 1538286582096179202, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1058360805207433216, "id": 1538286582469234688, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591075000}' to topic='twitter-topic'
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text 🧛‍♂️🐺🧟‍♂️Previous Paranormal Forecasts: Bigfoot Sasquatch Watch Spring brings the return of the Bigfoot aka Sasquatch from it's winter migration to the mid to southern United https://t.co/uDqyVkrFnJ #supernatural #paranormal #scifi #werewolves #fantasy sending to kafka topic twitter-topic
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 388385054, "id": 1538286583723352064, "text": "🧛\u200D♂️🐺🧟\u200D♂️Previous Paranormal Forecasts: Bigfoot Sasquatch Watch Spring brings the return of the Bigfoot aka Sasquatch from it's winter migration to the mid to southern United https://t.co/uDqyVkrFnJ #supernatural #paranormal #scifi #werewolves #fantasy", "createdAt": 1655591076000}' to topic='twitter-topic'
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 985346221869953024, "id": 1538286584482525184, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591076000}' to topic='twitter-topic'
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @snkr_twitr: NOW $87.60 each: adidas x Reebok ZX Fury Collection 
+
+Light Purple https://t.co/uyVaQV6HAC
+Bahia Mint https://t.co/e4xBxBCG… sending to kafka topic twitter-topic
+2022-06-18 19:24:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1281082098946727936, "id": 1538286586361786369, "text": "RT @snkr_twitr: NOW $87.60 each: adidas x Reebok ZX Fury Collection \n\nLight Purple https://t.co/uyVaQV6HAC\nBahia Mint https://t.co/e4xBxBCG\u2026", "createdAt": 1655591076000}' to topic='twitter-topic'
+2022-06-18 19:24:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 729923815, "id": 1538286590190944257, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591077000}' to topic='twitter-topic'
+2022-06-18 19:24:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2393424247, "id": 1538286590254104576, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591077000}' to topic='twitter-topic'
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1253892041274281984, "id": 1538286590988111872, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591077000}' to topic='twitter-topic'
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 157203846, "id": 1538286591730667520, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591078000}' to topic='twitter-topic'
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2657296086, "id": 1538286593395539968, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591078000}' to topic='twitter-topic'
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 287580288, "id": 1538286595375529985, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591078000}' to topic='twitter-topic'
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 917176590936678401, "id": 1538286595958116352, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591079000}' to topic='twitter-topic'
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1499673578228174854, "id": 1538286596969349121, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591079000}' to topic='twitter-topic'
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1222001865937883136, "id": 1538286599011803139, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591079000}' to topic='twitter-topic'
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1435661954971021318, "id": 1538286599108190208, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591079000}' to topic='twitter-topic'
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1209266490756612096, "id": 1538286599490142208, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591079000}' to topic='twitter-topic'
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ebrated. Or maybe thinking of it within an possible age metaphore, it could signify a contrast, rather than the adoration of youth associated with eternal spring, and summer being somewhat of a enarmourment with the idea of maturity, autumn relating to a death-yet-to-appear, rot sending to kafka topic twitter-topic
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1092267780068528130, "id": 1538286601218015233, "text": "ebrated. Or maybe thinking of it within an possible age metaphore, it could signify a contrast, rather than the adoration of youth associated with eternal spring, and summer being somewhat of a enarmourment with the idea of maturity, autumn relating to a death-yet-to-appear, rot", "createdAt": 1655591080000}' to topic='twitter-topic'
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1260789846756388866, "id": 1538286601448566784, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591080000}' to topic='twitter-topic'
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @DrJayDrNo The trucks won’t be allowed anywhere near The Hill. It’s been closed to traffic since the ‘freedom fairground’ parked there in the Spring. Hopefully they’ll feed them into their out of town supporters fields. I’m expecting a ton of security in town. sending to kafka topic twitter-topic
+2022-06-18 19:24:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2211363555, "id": 1538286601796784129, "text": "@DrJayDrNo The trucks won\u2019t be allowed anywhere near The Hill. It\u2019s been closed to traffic since the \u2018freedom fairground\u2019 parked there in the Spring. Hopefully they\u2019ll feed them into their out of town supporters fields. I\u2019m expecting a ton of security in town.", "createdAt": 1655591080000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 731576124661174273, "id": 1538286603646427137, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591080000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1075915559596769281, "id": 1538286603780919296, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591080000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1321547056482258946, "id": 1538286604095299584, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text Underground spring. couples can’t
+؟?
+سےفے نمشے https://t.co/HJnE7c3FUS sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1480948135, "id": 1538286604447522816, "text": "Underground spring. couples can\u2019t\n؟?\nسےفے نمشے https://t.co/HJnE7c3FUS", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1532357327411499008, "id": 1538286605084987392, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @MelodiaSings: The day has come! Launch of our Virtual "Light of a Brand New Day.' Sat June 18, 7 pm ET. Tune in wherever you are after… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 141734458, "id": 1538286605168943107, "text": "RT @MelodiaSings: The day has come! Launch of our Virtual \"Light of a Brand New Day.' Sat June 18, 7 pm ET. Tune in wherever you are after\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1247079464556609536, "id": 1538286605320192000, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1164931894066188289, "id": 1538286606377009153, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:46 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1366556828050599937, "id": 1538286607253618690, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591081000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1153646093084897280, "id": 1538286608859942912, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1046617012917719040, "id": 1538286609564590080, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2701349324, "id": 1538286609765892096, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1256827808690499585, "id": 1538286610017845248, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @javacodegeeks: Jakarta EE 8 Status - #Java Code Geeks - 2022 https://t.co/29Dc4ogKjs sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 983023802257993728, "id": 1538286610122407938, "text": "RT @javacodegeeks: Jakarta EE 8 Status - #Java Code Geeks - 2022 https://t.co/29Dc4ogKjs", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1369433369411543040, "id": 1538286610780913665, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591082000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @RMPICS_twt: 🐨 hi guys ~ it’s RM !
+🐨 my favourite memory from “Spring Day” is performing the lyrics that made us hopeful for the future… sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 507818632, "id": 1538286613058314240, "text": "RT @RMPICS_twt: 🐨 hi guys ~ it\u2019s RM !\n🐨 my favourite memory from \u201CSpring Day\u201D is performing the lyrics that made us hopeful for the future\u2026", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1317300195932200962, "id": 1538286613075312640, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 984073687300222976, "id": 1538286613498777601, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1189629223125880832, "id": 1538286613591216128, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @I_Am_Spring_Day: YES! Focus on ME. Give attention to ME. Love ME. sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1191906910917840896, "id": 1538286614954270720, "text": "RT @I_Am_Spring_Day: YES! Focus on ME. Give attention to ME. Love ME.", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1444458179845369859, "id": 1538286615872741376, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591083000}' to topic='twitter-topic'
+2022-06-18 19:24:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1494437820781379594, "id": 1538286616896188416, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591084000}' to topic='twitter-topic'
+2022-06-18 19:24:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 862992294542061568, "id": 1538286617479479296, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591084000}' to topic='twitter-topic'
+2022-06-18 19:24:50 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:50 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 999113076879249408, "id": 1538286620964573184, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591085000}' to topic='twitter-topic'
+2022-06-18 19:24:51 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:51 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 276633754, "id": 1538286624508977152, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591085000}' to topic='twitter-topic'
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1381471332056072193, "id": 1538286630485872640, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @wikivictorian: 'Beautiful Spring Blouses Direct from New York's Best Designers' from a fashion catalogue, 1922. https://t.co/CWYQ9iWUDO sending to kafka topic twitter-topic
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1014215492020686848, "id": 1538286632012488704, "text": "RT @wikivictorian: 'Beautiful Spring Blouses Direct from New York's Best Designers' from a fashion catalogue, 1922. https://t.co/CWYQ9iWUDO", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1110953635289010176, "id": 1538286632163749889, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 71710684, "id": 1538286632348139521, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1007817457619349505, "id": 1538286632368996352, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @bts_bighit spring day man. right after my long crying session sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1334882341546721281, "id": 1538286633094905856, "text": "@bts_bighit spring day man. right after my long crying session", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 323553093, "id": 1538286633115652098, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591087000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1532022245928878080, "id": 1538286633769918464, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591088000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @shannonrwatts: .@Everytown Survivor Fellow Giselle Morch from Silver Spring, Maryland, attended the Vice President’s #Juneteenth Celebr… sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 16725582, "id": 1538286634529062912, "text": "RT @shannonrwatts: .@Everytown Survivor Fellow Giselle Morch from Silver Spring, Maryland, attended the Vice President\u2019s #Juneteenth Celebr\u2026", "createdAt": 1655591088000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1534970903544868864, "id": 1538286635636658176, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591088000}' to topic='twitter-topic'
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:53 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1363392264, "id": 1538286636407980032, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591088000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1364423472592474115, "id": 1538286636760387584, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591088000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1027776730977718274, "id": 1538286638043906048, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1209675945629454338, "id": 1538286638077468672, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1303935925576069122, "id": 1538286639159517185, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text @Nikkityknack76 Oh no Nikki. I'm sorry. These spring colds seem to linger forever. sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1114167652384235520, "id": 1538286639428079618, "text": "@Nikkityknack76 Oh no Nikki. I'm sorry. These spring colds seem to linger forever.", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1463311178042540037, "id": 1538286639650316288, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1239788557851475968, "id": 1538286641386622976, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591089000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1235999195938488320, "id": 1538286642099724288, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @JAVdottxt: want to celebrate The Resurrection of 
+@JAVdottxt
+? what better way than buying t-shirts, hoodies, fanny packs, stickers mug… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 559835372, "id": 1538286642141704192, "text": "RT @JAVdottxt: want to celebrate The Resurrection of \n@JAVdottxt\n? what better way than buying t-shirts, hoodies, fanny packs, stickers mug\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @shannonrwatts: .@Everytown Survivor Fellow Giselle Morch from Silver Spring, Maryland, attended the Vice President’s #Juneteenth Celebr… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 896536097655853059, "id": 1538286642607316992, "text": "RT @shannonrwatts: .@Everytown Survivor Fellow Giselle Morch from Silver Spring, Maryland, attended the Vice President\u2019s #Juneteenth Celebr\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @malekCSGO: OMG regardez moi cette scène de malade, regardez moi cette prod quel plaisir.
+
+entrée de Vitality pendant les Blast spring d… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1047930045052932097, "id": 1538286643488116742, "text": "RT @malekCSGO: OMG regardez moi cette scène de malade, regardez moi cette prod quel plaisir.\n\nentrée de Vitality pendant les Blast spring d\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 775017492292866048, "id": 1538286643483844608, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.t.t.k.s.l.TwitterKafkaStatusListener - Received status text RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!
+Share your favorite “Spring Day” moment using #MyBTStory!
+💜 https://t.co/aw6tpufzkT
+
+#… sending to kafka topic twitter-topic
+2022-06-18 19:24:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1195748681598881794, "id": 1538286644532486149, "text": "RT @bts_bighit: '봄날'하면 떠오르는 여러분의 #MyBTStory 를 들려주세요!\nShare your favorite \u201CSpring Day\u201D moment using #MyBTStory!\n💜 https://t.co/aw6tpufzkT\n\n#\u2026", "createdAt": 1655591090000}' to topic='twitter-topic'
+2022-06-18 19:24:55 [SpringContextShutdownHook] INFO  c.m.t.t.k.s.r.i.TwitterKafkaStreamingRunner - Closing twitter stream!
+2022-06-18 19:24:56 [SpringContextShutdownHook] INFO  c.m.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2022-06-18 19:24:56 [SpringContextShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
