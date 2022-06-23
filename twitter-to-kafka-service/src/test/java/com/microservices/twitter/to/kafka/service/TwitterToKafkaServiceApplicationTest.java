@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class TwitterToKafkaServiceApplicationTest {
 
-    @Test
-    public void contextLoad () {
-
-    }
+//    @Test
+//    public void contextLoad () {
+//
+//    }
 }

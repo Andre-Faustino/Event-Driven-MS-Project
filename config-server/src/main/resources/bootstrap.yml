@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Andre-Faustino/Event-Driven-MS-Config-Repo
+          default-label: main
+          clone-on-start: true
+    fail-fast: true
