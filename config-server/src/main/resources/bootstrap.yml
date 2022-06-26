@@ -7,5 +7,12 @@ spring:
         git:
           uri: https://github.com/Andre-Faustino/Event-Driven-MS-Config-Repo
           default-label: main
+          username: Andre-Faustino
+          password: '{cipher}d289089a8ed11c77493243d251ca901b40b2b10a3a3a0de3f3152b00d965b271b0b53018860fb4310d30d9f793185760ced6bd4855c756a659e00570db905258'
           clone-on-start: true
     fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}d027a8099d8a1c176e0cce2b2354412f9c38c4d289b1f6cd847ab915861285dc3dd1e8e6bdbd4fcb45f7322ce9b24071'
+
